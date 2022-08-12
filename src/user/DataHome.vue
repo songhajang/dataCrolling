@@ -10,7 +10,7 @@
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dolorum sequi adipisci repellendus iure, <br>
        optio nemo tempora aspernatur libero consectetur cupiditate consequatur, eos dolores! Quas laboriosam dolorem voluptatum maxime repellat!
     </h3>
-      <h2 class="text-center my-20 text-xl ">
+      <h2 class="text-center mt-20 text-xl ">
         <router-link 
         class="text-white ease-in bg-sky-700 border-2 p-5 transition delay-100
               hover:text-sky-700 hover:bg-white hover:border-sky-700" 

@@ -1,6 +1,6 @@
 <template>
     <div class="text-center mt-10">
-        <hr>
+        <hr />
         <h1 class="text-3xl my-5 font-black">USER LIST</h1>
         <hr />
         <div v-if="userList === null" class="my-5 p-5 pb-10  mx-auto rounded-lg">
@@ -62,13 +62,12 @@ export default {
             let self = this;
 
             this.$axios.get('https://jsonplaceholder.typicode.com/users/')
-                .then(function (response) {
-                    // response
-                    if (response.status !== 200) {
+                .then(function (res) {
+                    if (res.status !== 200) {
                         alert('통신에러!');
                         self.userList = [];
                     } else {
-                        self.userList = response.data;
+                        self.userList = res.data;
                     }
                 })
         }

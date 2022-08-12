@@ -7,8 +7,16 @@
     <p class="text-center mt-10"><router-link class="p-3 bg-gray-300 rounded-md" :to="{name : 'user'}">돌아가기</router-link></p>
 
     <div class="mx-auto max-w-[850px] min-h-[400px] my-10 shadow-lg ">
-      <div class="my-10 text-center" v-if="DetailList == null">
-        <h3 class="text-red-500 text-4xl font-black m-10">오류 발생 -!</h3>
+
+      <div class="my-20 text-center" v-if="DetailList == null">
+          <img width="200" class="m-auto" src="https://dataapi.co.kr/img/loading.gif" />
+          <h3 class="text-black text-lg text-center pt-20">데이터 연결중입니다.</h3>
+      </div>
+
+      <div v-else-if="DetailList.length < 1">
+        <h3 class="text-red-500 text-2xl text-center pt-20">
+          <img width="50" class="mx-auto my-10" src="https://cdn-icons-png.flaticon.com/512/179/179386.png?w=360" />
+          데이터 연결 오류 !</h3>
       </div>
 
       <div v-else class="my-10 flex border-2 box-border ">

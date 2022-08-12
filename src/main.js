@@ -4,15 +4,15 @@ import App from './App.vue'
 import './index.css'
 
 import Home from './user/DataHome.vue'
-import get from './user/DataGet.vue'
-import detail from './user/DataGetDetail.vue'
+import userList from './user/DataGet.vue'
+import userProfile from './user/DataGetDetail.vue'
 import axios from 'axios'
 
 
 const routes =[
   {name: 'home', path: '/', component: Home},
-  {name: 'user', path: '/user', component: get},
-  {name: 'detail', path: '/user/detail/:userId?', component: detail},
+  {name: 'user', path: '/user', component: userList},
+  {name: 'detail', path: '/user/detail/:userId?', component: userProfile},
 ]
 
 const router = createRouter({
