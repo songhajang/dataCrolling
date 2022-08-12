@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import {createRouter, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import App from './App.vue'
 import './index.css'
 
@@ -12,11 +12,11 @@ import axios from 'axios'
 const routes =[
   {name: 'home', path: '/', component: Home},
   {name: 'user', path: '/user', component: userList},
-  {name: 'detail', path: '/user/detail/:userId?', component: userProfile},
+  {name: 'detail', path: '/user/:userId', component: userProfile},
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 })
 

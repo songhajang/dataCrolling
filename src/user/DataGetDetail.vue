@@ -50,7 +50,6 @@
           </h3>
 
         </div>
-
       </div>
     </div>
   </div>
@@ -61,6 +60,7 @@ export default {
   data() {
     return {
       DetailList: null,
+      errorList: true,
       userId: this.$route.params.userId,
     }
   },
@@ -77,7 +77,9 @@ export default {
           } else {
             self.DetailList = res.data;
           }
-
+        })
+        .catch(function(){
+            self.DetailList = []
         })
     }
   },
